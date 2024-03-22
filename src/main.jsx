@@ -8,6 +8,7 @@ import {
 import Me from './components/me.jsx';
 import Header from './components/header.jsx';
 import Banner from './components/banner.jsx';
+import ShowTheStudent from './components/ShowTheStudent.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <Me></Me>
+      },
+      {
+        path: "/student",
+        loader: async ()=> await fetch('https://script.google.com/macros/s/AKfycbxx2h2xTxyWOe_IL37GiYHxOfmCdeM6DU86fRXKjzwKngfrtZ5YZ3FNdo921OyowVkW/exec'),
+        element: <ShowTheStudent></ShowTheStudent>
       }
     ]
   }

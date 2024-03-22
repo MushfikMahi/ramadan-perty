@@ -31,6 +31,24 @@ const Header = () => {
 
       {/* footer */}
       <footer className="p-4 bg-neutral text-neutral-content">
+        <nav className="flex flex-col gap-5">
+          <Link to={"/"}><div className="flex justify-center border p-3 hover:bg-orange-400 text-white"><p>Go back to home page</p></div></Link>
+          <Link to={"/student"}><div className="flex justify-center border p-3 hover:bg-orange-400 text-white"><p>See Who Confirmed Already</p></div></Link>
+          <Link to={"/about"}>
+          <div className="flex items-center gap-3 border justify-center hover:bg-orange-400 text-white">
+            <div className="flex items-center gap-2">
+              <p>About me</p>
+              <FaArrowRight />
+            </div>
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img alt="Mushfikus Salehin Mahi" src="https://i.ibb.co/fx4tJcM/Whats-App-Image-2024-03-20-at-19-02-54-a462226b.jpg" />
+              </div>
+            </div>
+          </div>
+          </Link>
+        </nav>
+        <hr className="my-5"/>
         <div className="flex justify-between items-center">
           <aside className="">
             <p>Copyright © 2024 Mushfikus Salehin Mahi - All rights reserved.</p>
