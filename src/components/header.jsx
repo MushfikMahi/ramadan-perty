@@ -32,8 +32,6 @@ const Header = () => {
       {/* footer */}
       <footer className="p-4 bg-neutral text-neutral-content">
         <nav className="flex flex-col gap-5">
-          <Link to={"/"}><div className="flex justify-center border p-3 hover:bg-orange-400 text-white"><p>Go back to home page</p></div></Link>
-          <Link to={"/student"}><div className="flex justify-center border p-3 hover:bg-orange-400 text-white"><p>See Who Confirmed Already</p></div></Link>
           <Link to={"/about"}>
           <div className="flex items-center gap-3 border justify-center hover:bg-orange-400 text-white">
             <div className="flex items-center gap-2">

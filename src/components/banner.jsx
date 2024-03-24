@@ -1,67 +1,20 @@
-import { useState, useEffect } from 'react';
-
 
 const Banner = () => {
-
-  const [hours, setHours] = useState(() => parseInt(localStorage.getItem('countdownHours')) || 9);
-  const [minutes, setMinutes] = useState(() => parseInt(localStorage.getItem('countdownMinutes')) || 15);
-  const [seconds, setSeconds] = useState(() => parseInt(localStorage.getItem('countdownSeconds')) || 17);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      } else {
-        if (minutes > 0) {
-          setMinutes(minutes - 1);
-          setSeconds(59);
-        } else {
-          if (hours > 0) {
-            setHours(hours - 1);
-            setMinutes(59);
-            setSeconds(59);
-          } else {
-            clearInterval(interval);
-            // Handle countdown completion here
-          }
-        }
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [hours, minutes, seconds]);
-
-  useEffect(() => {
-    localStorage.setItem('countdownHours', hours);
-    localStorage.setItem('countdownMinutes', minutes);
-    localStorage.setItem('countdownSeconds', seconds);
-  }, [hours, minutes, seconds]);
-
 
 
   return (
     <div>
-      <div className="hero" style={{ backgroundImage: 'url(https://i.ibb.co/Hqs54LH/golden.png)' }}>
+      <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/Hqs54LH/golden.png)' }}>
         <div className="hero-content text-center text-white">
-          <div className="p-5 md:max-w-md my-24">
-            {/* countdown start */}
-            <div className="grid grid-flow-col gap-5 items-center justify-center mb-5 text-center auto-cols-max">
-              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">0{hours}</span>
-                hours
-              </div>
-              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">{minutes}</span>
-                min
-              </div>
-              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">{seconds}</span>
-                sec
-              </div>
+          <div className="p-5 md:max-w-md my-24 text-black space-y-10">
+            {/* <h2 className="mb-5 text-5xl font-bold text-black">Iftar Party</h2> */}
+            <div className="flex justify-center">
+            <img className="h-40" src="https://th.bing.com/th/id/R.9dae8d5327e80a504392e5477065f620?rik=WOWYi74qI2IBIw&riu=http%3a%2f%2fwww.clipartly.com%2fwp-content%2fuploads%2f2017%2f11%2fOops-Speech-Bubble-Png.png&ehk=Z1l%2fuiT3AgDyKqd4d3GuxoSpc40z%2bs%2bAWxkkWcA9v8U%3d&risl=&pid=ImgRaw&r=0" alt="" />
             </div>
-            {/* countdown ends */}
-            <h2 className="mb-5 text-5xl font-bold text-black">Iftar Party</h2>
-            <p className="mb-5  text-xl text-black">আসসালামুআলাইকুম আমরা সবাই মিলে ২৫ মার্চ ইফতার করছি <span className="font-bold text-xl">CRB</span> তে তুমি যদি জয়েন হতে চাও আমাদের সাথে তাহলে নিচে বাটন এ ক্লিক করে ফর্মটি পুরোন কর</p>
+            <h3 className="text-3xl font-bold">You misssed it bro !!!!</h3>
+            <p className="text-2xl font-bold">If you have any query contact with me-</p>
+            <p className="text-2xl font-bold">+8801408000789</p>
+            {/* <p className="mb-5  text-xl text-black">আসসালামুআলাইকুম আমরা সবাই মিলে ২৫ মার্চ ইফতার করছি <span className="font-bold text-xl">CRB</span> তে তুমি যদি জয়েন হতে চাও আমাদের সাথে তাহলে নিচে বাটন এ ক্লিক করে ফর্মটি পুরোন কর</p>
             <p className="mb-5  text-xl text-black"><span className="font-bold text-xl">Aproximate ৩০০</span>  টাকা করে লাগবে</p>
             <p className="mb-5  text-left text-2xl font-bold text-black">খবরে আইটেম যা যা থাকছে এবং আনুমানিক খরচ তুলে ধরা হলো</p>
             <ul className="text-left">
@@ -110,7 +63,7 @@ const Banner = () => {
               <li className="mb-5  text-xl text-black list-disc">খাবার রাখার জন্য কাপড় ভাড়া নেয়া হবে  অথবা পলিথিন কেনা হবে <span className="font-bold text-xl">Aproximate</span></li>
             </ul>
 
-            <button className="btn bg-orange-400 border-none text-xl p-3 text-black"><a href="https://docs.google.com/forms/d/e/1FAIpQLSekTRiz0vmVJAcNosrOSzU-ELCboj2EuasqAOt2m7nIscVJAA/viewform?usp=sf_link">ফর্মটি পূরণ কর</a></button>
+            <button className="btn bg-orange-400 border-none text-xl p-3 text-black"><a href="https://docs.google.com/forms/d/e/1FAIpQLSekTRiz0vmVJAcNosrOSzU-ELCboj2EuasqAOt2m7nIscVJAA/viewform?usp=sf_link">ফর্মটি পূরণ কর</a></button> */}
           </div>
         </div>
       </div>
